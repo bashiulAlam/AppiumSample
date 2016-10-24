@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="CardPurchase.GetServiceList">
+        <methods>
+          <include name="testMethod03_purcaseCard"/>
+          <include name="testMethod01_getServiceList"/>
+          <include name="setUp"/>
+          <include name="testMethod02_swipeDown"/>
+        </methods>
+      </class> <!-- CardPurchase.GetServiceList -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
