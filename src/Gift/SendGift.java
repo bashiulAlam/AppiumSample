@@ -19,6 +19,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 import org.openqa.selenium.WebElement;
 import Utility.GiftUtil;
+import bsh.util.Util;
 
 public class SendGift {
 
@@ -54,11 +55,18 @@ public class SendGift {
 	@Test
 	public void testMethod01_selectOptionCard() {
 
-		List<WebElement> availableCards = GiftUtil.getAvailableCards(webDriver);
-		
-		for (WebElement card : availableCards) {
-			if(card.getText() != "Kona Money") {
-				
+		if (GiftUtil.isGiftEnabled(webDriver)) {
+
+			webDriver
+					.findElement(By
+							.xpath("//android.widget.TextView[@resource-id='com.konai.konamoney:id/dashboard_gift_text_tv']"))
+					.click();
+		} else {
+			List<WebElement> availableCards = GiftUtil.getAvailableCards(webDriver);
+
+			for (WebElement card : availableCards) {
+				if (card.getText() != "Kona Money") {
+				}
 			}
 		}
 	}
