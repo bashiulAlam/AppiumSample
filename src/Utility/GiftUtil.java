@@ -19,6 +19,14 @@ public class GiftUtil {
 		else
 			return false;
 	}
+	
+	public static void clickGiftBtn(WebDriver webDriver) {
+		
+		webDriver
+		.findElement(By
+				.xpath("//android.widget.TextView[@resource-id='com.konai.konamoney:id/dashboard_gift_text_tv']"))
+		.click();
+	}
 
 	public static List<WebElement> getAvailableCards(WebDriver webDriver) {
 

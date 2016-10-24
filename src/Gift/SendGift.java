@@ -56,16 +56,26 @@ public class SendGift {
 	public void testMethod01_selectOptionCard() {
 
 		if (GiftUtil.isGiftEnabled(webDriver)) {
-
-			webDriver
-					.findElement(By
-							.xpath("//android.widget.TextView[@resource-id='com.konai.konamoney:id/dashboard_gift_text_tv']"))
-					.click();
+			GiftUtil.clickGiftBtn(webDriver);
 		} else {
 			List<WebElement> availableCards = GiftUtil.getAvailableCards(webDriver);
 
 			for (WebElement card : availableCards) {
 				if (card.getText() != "Kona Money") {
+					webDriver
+							.findElement(By
+									.xpath("//android.widget.ImageView[@resource-id='com.konai.konamoney:id/sub_card_img']"))
+							.click();
+					
+					webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+					
+					if(GiftUtil.isGiftEnabled(webDriver)) {
+						GiftUtil.clickGiftBtn(webDriver);
+						webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+						break;
+					} else {
+						System.out.println("Could not find any card that can be sent as a gift...");
+					}
 				}
 			}
 		}
