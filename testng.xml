@@ -4,8 +4,11 @@
   <test name="Test">
   	<classes>
 
-		<class name="CatchNotification"/>  	
-  		<class name="CalculatorTest"/>
+		<!-- <class name="CatchNotification"/> -->  	
+  		<!-- <class name="CalculatorTest"/> -->
+  		
+  		<class name="Login"/>
+  		<class name="GetServiceList"/>
   		
   	</classes>
   </test> <!-- Test -->

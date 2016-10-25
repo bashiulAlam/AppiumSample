@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15125" started-at="2016-10-25T07:13:35Z" finished-at="2016-10-25T07:13:50Z">
+  <suite name="Default suite" duration-ms="18356" started-at="2016-10-25T12:47:16Z" finished-at="2016-10-25T12:47:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15125" started-at="2016-10-25T07:13:35Z" finished-at="2016-10-25T07:13:50Z">
-      <class name="Gift.SendGift">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Gift.SendGift@7823a2f9]" name="setUp" is-config="true" duration-ms="7253" started-at="2016-10-25T13:13:35Z" finished-at="2016-10-25T13:13:42Z">
+    <test name="Default test" duration-ms="18356" started-at="2016-10-25T12:47:16Z" finished-at="2016-10-25T12:47:35Z">
+      <class name="Wallet.Login">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Wallet.Login@7823a2f9]" name="setUp" is-config="true" duration-ms="6969" started-at="2016-10-25T18:47:16Z" finished-at="2016-10-25T18:47:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testMethod01_selectOptionCard()[pri:0, instance:Gift.SendGift@7823a2f9]" name="testMethod01_selectOptionCard" duration-ms="6559" started-at="2016-10-25T13:13:42Z" finished-at="2016-10-25T13:13:49Z">
+        <test-method status="PASS" signature="testMethod01_login()[pri:0, instance:Wallet.Login@7823a2f9]" name="testMethod01_login" duration-ms="10043" started-at="2016-10-25T18:47:23Z" finished-at="2016-10-25T18:47:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod01_selectOptionCard -->
-        <test-method status="PASS" signature="End()[pri:0, instance:Gift.SendGift@7823a2f9]" name="End" is-config="true" duration-ms="1283" started-at="2016-10-25T13:13:49Z" finished-at="2016-10-25T13:13:50Z">
+        </test-method> <!-- testMethod01_login -->
+        <test-method status="PASS" signature="End()[pri:0, instance:Wallet.Login@7823a2f9]" name="End" is-config="true" duration-ms="1326" started-at="2016-10-25T18:47:33Z" finished-at="2016-10-25T18:47:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- End -->
-      </class> <!-- Gift.SendGift -->
+      </class> <!-- Wallet.Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
