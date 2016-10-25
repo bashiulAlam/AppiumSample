@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Ignore;
+import org.junit.experimental.theories.suppliers.TestedOn;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -19,6 +21,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 import org.openqa.selenium.WebElement;
 import Utility.GiftUtil;
+import Helper.Constants;
 import bsh.util.Util;
 
 public class SendGift {
@@ -55,27 +58,26 @@ public class SendGift {
 	@Test
 	public void testMethod01_selectOptionCard() {
 
-		if (GiftUtil.isGiftEnabled(webDriver)) {
-			GiftUtil.clickGiftBtn(webDriver);
+		if (GiftUtil.isGiftEnabled(androidDriver)) {
+			GiftUtil.clickGiftBtn(androidDriver);
 		} else {
-			List<WebElement> availableCards = GiftUtil.getAvailableCards(webDriver);
-
+			List<WebElement> availableCards = GiftUtil.getAvailableCards(androidDriver);
+			
 			for (WebElement card : availableCards) {
+				
 				if (card.getText() != "Kona Money") {
-					webDriver
-							.findElement(By
-									.xpath("//android.widget.ImageView[@resource-id='com.konai.konamoney:id/sub_card_img']"))
-							.click();
+					card.click();
+					androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 					
-					webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					
-					if(GiftUtil.isGiftEnabled(webDriver)) {
-						GiftUtil.clickGiftBtn(webDriver);
-						webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+					if(GiftUtil.isGiftEnabled(androidDriver)) {
+						
+						GiftUtil.clickGiftBtn(androidDriver);
+						Constants.sendGift = true;
+						androidDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 						break;
-					} else {
-						System.out.println("Could not find any card that can be sent as a gift...");
-					}
+					} 
+				} else {
+					System.out.println("Could not find any card that can be sent as a gift...");
 				}
 			}
 		}

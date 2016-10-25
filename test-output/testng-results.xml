@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34177" started-at="2016-10-17T11:26:28Z" finished-at="2016-10-17T11:27:02Z">
+  <suite name="Default suite" duration-ms="15125" started-at="2016-10-25T07:13:35Z" finished-at="2016-10-25T07:13:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34177" started-at="2016-10-17T11:26:28Z" finished-at="2016-10-17T11:27:02Z">
-      <class name="CardPurchase.GetServiceList">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:CardPurchase.GetServiceList@7823a2f9]" name="setUp" is-config="true" duration-ms="7862" started-at="2016-10-17T17:26:28Z" finished-at="2016-10-17T17:26:36Z">
+    <test name="Default test" duration-ms="15125" started-at="2016-10-25T07:13:35Z" finished-at="2016-10-25T07:13:50Z">
+      <class name="Gift.SendGift">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Gift.SendGift@7823a2f9]" name="setUp" is-config="true" duration-ms="7253" started-at="2016-10-25T13:13:35Z" finished-at="2016-10-25T13:13:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testMethod01_getServiceList()[pri:0, instance:CardPurchase.GetServiceList@7823a2f9]" name="testMethod01_getServiceList" duration-ms="5381" started-at="2016-10-17T17:26:36Z" finished-at="2016-10-17T17:26:41Z">
+        <test-method status="PASS" signature="testMethod01_selectOptionCard()[pri:0, instance:Gift.SendGift@7823a2f9]" name="testMethod01_selectOptionCard" duration-ms="6559" started-at="2016-10-25T13:13:42Z" finished-at="2016-10-25T13:13:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod01_getServiceList -->
-        <test-method status="PASS" signature="testMethod02_swipeDown()[pri:0, instance:CardPurchase.GetServiceList@7823a2f9]" name="testMethod02_swipeDown" duration-ms="10375" started-at="2016-10-17T17:26:41Z" finished-at="2016-10-17T17:26:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethod02_swipeDown -->
-        <test-method status="PASS" signature="testMethod03_purcaseCard()[pri:0, instance:CardPurchase.GetServiceList@7823a2f9]" name="testMethod03_purcaseCard" duration-ms="10522" started-at="2016-10-17T17:26:51Z" finished-at="2016-10-17T17:27:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethod03_purcaseCard -->
-        <test-method status="PASS" signature="End()[pri:0, instance:CardPurchase.GetServiceList@7823a2f9]" name="End" is-config="true" duration-ms="0" started-at="2016-10-17T17:27:02Z" finished-at="2016-10-17T17:27:02Z">
+        </test-method> <!-- testMethod01_selectOptionCard -->
+        <test-method status="PASS" signature="End()[pri:0, instance:Gift.SendGift@7823a2f9]" name="End" is-config="true" duration-ms="1283" started-at="2016-10-25T13:13:49Z" finished-at="2016-10-25T13:13:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- End -->
-      </class> <!-- CardPurchase.GetServiceList -->
+      </class> <!-- Gift.SendGift -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
