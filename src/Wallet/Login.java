@@ -40,7 +40,7 @@ public class Login {
 		capabilities.setCapability("appActivity", "com.konai.konamoney.ui.splash.SplashActivity");
 
 		try {
-			androidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			androidDriver = new AndroidDriver(new URL("http://127.0.0.1:1234/wd/hub"), capabilities);
 		} catch (MalformedURLException e) {
 			// TODO: handle exception
 			e.printStackTrace();

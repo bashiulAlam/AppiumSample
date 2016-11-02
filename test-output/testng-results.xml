@@ -1,25 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="6" failed="0" total="6" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18356" started-at="2016-10-25T12:47:16Z" finished-at="2016-10-25T12:47:35Z">
+  <suite name="Suite" duration-ms="2940" started-at="2016-11-01T10:06:09Z" finished-at="2016-11-01T10:06:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18356" started-at="2016-10-25T12:47:16Z" finished-at="2016-10-25T12:47:35Z">
-      <class name="Wallet.Login">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Wallet.Login@7823a2f9]" name="setUp" is-config="true" duration-ms="6969" started-at="2016-10-25T18:47:16Z" finished-at="2016-10-25T18:47:23Z">
+    <test name="Test1" duration-ms="1828" started-at="2016-11-01T10:06:09Z" finished-at="2016-11-01T10:06:11Z">
+      <class name="CardPurchase.GetServiceList">
+        <test-method status="FAIL" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:CardPurchase.GetServiceList@39aeed2f]" name="setUp" is-config="true" duration-ms="0" started-at="2016-11-01T16:06:09Z" finished-at="2016-11-01T16:06:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CB5A25ZWQQ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10.88.234.96]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'K-Sabab-L1', ip: '10.88.234.39', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'K-Sabab-L1', ip: '10.88.234.39', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:92)
+	at CardPurchase.GetServiceList.setUp(GetServiceList.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:631)
+	at org.testng.TestRunner.run(TestRunner.java:599)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 10.88.234.96:80 [/10.88.234.96] failed: Connection refused: connect
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'K-Sabab-L1', ip: '10.88.234.39', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 34 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 10.88.234.96:80 [/10.88.234.96] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 35 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 48 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testMethod01_login()[pri:0, instance:Wallet.Login@7823a2f9]" name="testMethod01_login" duration-ms="10043" started-at="2016-10-25T18:47:23Z" finished-at="2016-10-25T18:47:33Z">
+        <test-method status="SKIP" signature="testMethod01_getServiceList()[pri:0, instance:CardPurchase.GetServiceList@39aeed2f]" name="testMethod01_getServiceList" duration-ms="1" started-at="2016-11-01T16:06:11Z" finished-at="2016-11-01T16:06:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod01_login -->
-        <test-method status="PASS" signature="End()[pri:0, instance:Wallet.Login@7823a2f9]" name="End" is-config="true" duration-ms="1326" started-at="2016-10-25T18:47:33Z" finished-at="2016-10-25T18:47:35Z">
+        </test-method> <!-- testMethod01_getServiceList -->
+        <test-method status="SKIP" signature="testMethod02_swipeDown()[pri:0, instance:CardPurchase.GetServiceList@39aeed2f]" name="testMethod02_swipeDown" duration-ms="1" started-at="2016-11-01T16:06:11Z" finished-at="2016-11-01T16:06:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod02_swipeDown -->
+        <test-method status="SKIP" signature="testMethod03_purcaseCard()[pri:0, instance:CardPurchase.GetServiceList@39aeed2f]" name="testMethod03_purcaseCard" duration-ms="1" started-at="2016-11-01T16:06:11Z" finished-at="2016-11-01T16:06:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod03_purcaseCard -->
+        <test-method status="SKIP" signature="End()[pri:0, instance:CardPurchase.GetServiceList@39aeed2f]" name="End" is-config="true" duration-ms="0" started-at="2016-11-01T16:06:11Z" finished-at="2016-11-01T16:06:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- End -->
-      </class> <!-- Wallet.Login -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- CardPurchase.GetServiceList -->
+    </test> <!-- Test1 -->
+    <test name="Test2" duration-ms="1074" started-at="2016-11-01T10:06:11Z" finished-at="2016-11-01T10:06:12Z">
+      <class name="CardPurchase.GetServiceList">
+        <test-method status="FAIL" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:CardPurchase.GetServiceList@5e5792a0]" name="setUp" is-config="true" duration-ms="0" started-at="2016-11-01T16:06:11Z" finished-at="2016-11-01T16:06:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LGD8565677d967]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10.88.234.52]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'K-Sabab-L1', ip: '10.88.234.39', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'K-Sabab-L1', ip: '10.88.234.39', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:36)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:114)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:132)
+	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:92)
+	at CardPurchase.GetServiceList.setUp(GetServiceList.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:631)
+	at org.testng.TestRunner.run(TestRunner.java:599)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 10.88.234.52:80 [/10.88.234.52] failed: Connection refused: connect
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'K-Sabab-L1', ip: '10.88.234.39', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 34 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 10.88.234.52:80 [/10.88.234.52] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 35 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 48 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="testMethod01_getServiceList()[pri:0, instance:CardPurchase.GetServiceList@5e5792a0]" name="testMethod01_getServiceList" duration-ms="15" started-at="2016-11-01T16:06:12Z" finished-at="2016-11-01T16:06:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod01_getServiceList -->
+        <test-method status="SKIP" signature="testMethod02_swipeDown()[pri:0, instance:CardPurchase.GetServiceList@5e5792a0]" name="testMethod02_swipeDown" duration-ms="3" started-at="2016-11-01T16:06:12Z" finished-at="2016-11-01T16:06:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod02_swipeDown -->
+        <test-method status="SKIP" signature="testMethod03_purcaseCard()[pri:0, instance:CardPurchase.GetServiceList@5e5792a0]" name="testMethod03_purcaseCard" duration-ms="0" started-at="2016-11-01T16:06:12Z" finished-at="2016-11-01T16:06:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod03_purcaseCard -->
+        <test-method status="SKIP" signature="End()[pri:0, instance:CardPurchase.GetServiceList@5e5792a0]" name="End" is-config="true" duration-ms="0" started-at="2016-11-01T16:06:12Z" finished-at="2016-11-01T16:06:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- End -->
+      </class> <!-- CardPurchase.GetServiceList -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
 </testng-results>

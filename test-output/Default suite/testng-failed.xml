@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Gift.SendGift">
+      <class name="CardPurchase.GetServiceList">
         <methods>
-          <include name="testMethod01_selectOptionCard"/>
-          <include name="setUp"/>
+          <include name="testMethod03_purcaseCard"/>
+          <include name="testMethod01_getServiceList"/>
+          <include name="testMethod02_swipeDown"/>
         </methods>
-      </class> <!-- Gift.SendGift -->
+      </class> <!-- CardPurchase.GetServiceList -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

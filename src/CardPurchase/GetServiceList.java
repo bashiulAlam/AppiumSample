@@ -19,6 +19,7 @@ import org.openqa.selenium.remote.mobile.AddNetworkConnection;
 import org.openqa.selenium.remote.server.handler.FindElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -31,13 +32,13 @@ public class GetServiceList {
 	AndroidDriver androidDriver;
 	List<WebElement> purchaseBtn = new ArrayList();
     
-
+	@Parameters({ "deviceName_", "URL_" })
 	@BeforeTest
-	public void setUp() throws MalformedURLException {
+	public void setUp(String deviceName_, String URL_) throws MalformedURLException {
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 
-		capabilities.setCapability("deviceName", "CB5A25ZWQQ");
+		capabilities.setCapability("deviceName", deviceName_);
 
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "Android");
 
@@ -50,7 +51,8 @@ public class GetServiceList {
 		capabilities.setCapability("appActivity", "com.konai.konamoney.ui.splash.SplashActivity");
 
 		try {
-			androidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			//androidDriver = new AndroidDriver(new URL("http://127.0.0.2:3456/wd/hub"), capabilities);
+			androidDriver = new AndroidDriver(new URL("http://"+URL_), capabilities);
 		} catch (MalformedURLException e) {
 			// TODO: handle exception
 			e.printStackTrace();
